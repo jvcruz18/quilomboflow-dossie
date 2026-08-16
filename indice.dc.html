@@ -7,349 +7,361 @@
 </head>
 <body>
 <x-dc>
-<!--[CDATA[
-<sc-helmet-->
+<![CDATA[
+<helmet>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=Archivo:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 body{margin:0;background:#fdfdfb;}
 .ficha-row:active{background:#f2f0e9;}
 @media (min-width:600px){.ficha-row{flex-direction:row !important; align-items:baseline !important;}}
 </style>
-<script>
-document.addEventListener('DOMContentLoaded', function(){
-  var input = document.getElementById('ficha-search');
-  if(!input) return;
-  input.addEventListener('input', function(){
-    var q = input.value.toLowerCase();
-    document.querySelectorAll('.ficha-row').forEach(function(row){
-      row.style.display = row.getAttribute('data-search').indexOf(q) === -1 ? 'none' : 'flex';
-    });
-  });
-});
-</script>
-
+</helmet>
 
 <div style="font-family:'Archivo',sans-serif; color:#1c1a17; max-width:900px; margin:0 auto; padding:32px 16px 48px;">
   <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:24px; margin-bottom:4px;">DOSSIÊ — Fichas de Aprofundamento</div>
   <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.08em; text-transform:uppercase; color:#8a8378; margin-bottom:16px;">44 PESQUISAS</div>
-  <input id="ficha-search" type="text" placeholder="Buscar por título ou eixo..." style="width:100%; box-sizing:border-box; font-family:'Archivo',sans-serif; font-size:16px; padding:12px 14px; border:1.5px solid #cfc9ba; border-radius:6px; margin-bottom:8px; background:#fff; color:#1c1a17;">
+  <input id="ficha-search" type="text" placeholder="Buscar por título ou eixo..." oninput="{{ onSearch }}" style="width:100%; box-sizing:border-box; font-family:'Archivo',sans-serif; font-size:16px; padding:12px 14px; border:1.5px solid #cfc9ba; border-radius:6px; margin-bottom:8px; background:#fff; color:#1c1a17;">
   <div style="display:flex; flex-direction:column;">
-        <a href="ficha-01.dc.html" class="ficha-row" data-search="análise comparada dos objetivos curriculares e as avaliações nacionais com foco no desenvolvimento da alfabetização no brasil e no chile (também referenciado como " estudo="" comparado="" sobre="" as="" políticas="" de="" alfabetização="" no="" brasil="" e="" chile").="" alfabetização"="" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">Alfabetização</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">1/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Análise comparada dos objetivos curriculares e as avaliações nacionais com foco no desenvolvimento da alfabetização no Brasil e no Chile (também referenciado como "Estudo comparado sobre as políticas de alfabetização no Brasil e no Chile").</span>
-        </a>
-        <a href="ficha-02.dc.html" class="ficha-row" data-search="remedial education: evidence from a sequence of experiments in colombia . alfabetização" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">Alfabetização</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">2/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Remedial Education: Evidence from a Sequence of Experiments in Colombia .</span>
-        </a>
-        <a href="ficha-03.dc.html" class="ficha-row" data-search="utilização da abordagem fônica na etapa de alfabetização: um olhar para 11 territórios alfabetização" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">Alfabetização</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">3/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Utilização da abordagem fônica na etapa de alfabetização: um olhar para 11 territórios</span>
-        </a>
-        <a href="ficha-04.dc.html" class="ficha-row" data-search="alfabetização em língua portuguesa e aprendizado em matemática alfabetização" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">Alfabetização</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">4/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Alfabetização em Língua Portuguesa e Aprendizado em matemática</span>
-        </a>
-        <a href="ficha-05.dc.html" class="ficha-row" data-search="estudo para construção de visão sobre alfabetização - análise de avaliações de lp do 2º ano alfabetização" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">Alfabetização</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">5/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">ESTUDO PARA CONSTRUÇÃO DE VISÃO SOBRE ALFABETIZAÇÃO - Análise de avaliações de LP do 2º ano</span>
-        </a>
-        <a href="ficha-06.dc.html" class="ficha-row" data-search="estudos sobre os parâmetros das avaliações de fluência leitora no 2º ano do ensino fundamental fluência leitora, parâmetros" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">Fluência Leitora, Parâmetros</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">6/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Estudos sobre os parâmetros das avaliações de fluência leitora no 2º ano do ensino fundamental</span>
-        </a>
-        <a href="ficha-07.dc.html" class="ficha-row" data-search="complexidade textual fluência leitora, parâmetros" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">Fluência Leitora, Parâmetros</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">7/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Complexidade Textual</span>
-        </a>
-        <a href="ficha-08.dc.html" class="ficha-row" data-search="estudos sobre os parâmetros das avaliações de fluência leitora no 2° ano do ensino fundamental no brasil (estudo de revisão de escopo da literatura e estudo com análises quantitativas de avaliação de fluência de larga escala na rede pública de alguns territórios brasileiros) dentificar como a complexidade textual é abordada nos currículos, materiais didáticos e na formação docente em diferentes territórios fluência leitora, parâmetros" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">Fluência Leitora, Parâmetros</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">8/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Estudos sobre os parâmetros das avaliações de fluência leitora no 2° ano do ensino fundamental no Brasil (Estudo de revisão de escopo da literatura e estudo com análises quantitativas de avaliação de fluência de larga escala na rede pública de alguns territórios brasileiros) dentificar como a complexidade textual é abordada nos currículos, materiais didáticos e na formação docente em diferentes territórios</span>
-        </a>
-        <a href="ficha-09.dc.html" class="ficha-row" data-search="fluência em leitura e compreensão de textos fluência leitora, parâmetros" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">Fluência Leitora, Parâmetros</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">9/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Fluência em Leitura e Compreensão de Textos</span>
-        </a>
-        <a href="ficha-10.dc.html" class="ficha-row" data-search="compreendendo pedagogicamente a relação entre resultados da avaliação de leitura e os resultados da avaliação de fluência em leitura oral fluência leitora, parâmetros" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">Fluência Leitora, Parâmetros</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">10/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Compreendendo pedagogicamente a relação entre resultados da avaliação de leitura e os resultados da avaliação de fluência em leitura oral</span>
-        </a>
-        <a href="ficha-11.dc.html" class="ficha-row" data-search="avaliação periódica de fluência leitora em três uf brasileiras: considerações sobre a evolução da aprendizagem. fluência leitora, parâmetros" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">Fluência Leitora, Parâmetros</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">11/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Avaliação periódica de fluência leitora em três UF brasileiras: considerações sobre a evolução da aprendizagem.</span>
-        </a>
-        <a href="ficha-12.dc.html" class="ficha-row" data-search="pesquisa de correlação - fluência, proficiência e dados contextuais das avaliações em larga escala fluência leitora, parâmetros" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">Fluência Leitora, Parâmetros</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">12/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Pesquisa de correlação - fluência, proficiência e dados contextuais das avaliações em larga escala</span>
-        </a>
-        <a href="ficha-13.dc.html" class="ficha-row" data-search="aplicativo ediler para avaliação de fluência em leitura oral: investigando a consistência dos resultados das avaliações realizadas fluência leitora, parâmetros" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">Fluência Leitora, Parâmetros</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">13/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Aplicativo Ediler para Avaliação de Fluência em Leitura Oral: Investigando a Consistência dos Resultados das Avaliações Realizadas</span>
-        </a>
-        <a href="ficha-14.dc.html" class="ficha-row" data-search="fluência em leitura como preditora de proficiência: evidências de validade a partir dos dados de avaliações em larga escala de 2023 fluência leitora, parâmetros" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">Fluência Leitora, Parâmetros</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">14/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Fluência em leitura como preditora de proficiência: evidências de validade a partir dos dados de avaliações em larga escala de 2023</span>
-        </a>
-        <a href="ficha-15.dc.html" class="ficha-row" data-search="a relação entre a implementação de políticas de alfabetização e o desenvolvimento de leitura ao final do 2º ano do ensino fundamental. fluência leitora, parâmetros" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">Fluência Leitora, Parâmetros</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">15/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">A relação entre a implementação de políticas de alfabetização e o desenvolvimento de leitura ao final do 2º ano do Ensino Fundamental.</span>
-        </a>
-        <a href="ficha-16.dc.html" class="ficha-row" data-search="análise teórico-metodológica do instrumento de avaliação da fluência de leitura no programa educar pra valer fluência leitora, parâmetros" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">Fluência Leitora, Parâmetros</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">16/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Análise Teórico-Metodológica do Instrumento de Avaliação da Fluência de Leitura no Programa Educar pra Valer</span>
-        </a>
-        <a href="ficha-17.dc.html" class="ficha-row" data-search="avaliações em larga escala na alfabetização: uma análise comparada de 6 experiências avaliações em larga escala" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">Avaliações em Larga Escala</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">17/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Avaliações em Larga Escala na Alfabetização: uma análise comparada de 6 experiências</span>
-        </a>
-        <a href="ficha-18.dc.html" class="ficha-row" data-search="acesso/qualidade da educação infantil e seus impactos na escala saeb avaliações em larga escala" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">Avaliações em Larga Escala</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">18/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Acesso/Qualidade da Educação Infantil e seus Impactos na Escala SAEB</span>
-        </a>
-        <a href="ficha-19.dc.html" class="ficha-row" data-search="um panorama da situação de aprendizagem dos estudantes do 2º ano do ensino fundamental a partir do saeb 2021 avaliações em larga escala" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">Avaliações em Larga Escala</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">19/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Um panorama da situação de aprendizagem dos estudantes do 2º ano do Ensino Fundamental a partir do Saeb 2021</span>
-        </a>
-        <a href="ficha-20.dc.html" class="ficha-row" data-search="relação do desempenho no 2º ano com os resultados do 5º ano avaliações em larga escala" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">Avaliações em Larga Escala</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">20/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Relação do desempenho no 2º ano com os resultados do 5º ano</span>
-        </a>
-        <a href="ficha-21.dc.html" class="ficha-row" data-search="perfis de leitor, proficiência e dados contextuais: pesquisa de correlação a partir de avaliações em larga escala – 2019, 2021 e 2022 avaliações em larga escala" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">Avaliações em Larga Escala</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">21/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Perfis de leitor, proficiência e dados contextuais: Pesquisa de correlação a partir de avaliações em larga escala – 2019, 2021 e 2022</span>
-        </a>
-        <a href="ficha-22.dc.html" class="ficha-row" data-search="relatório de correlação entre proficiência e perfis de leitor a partir de avaliações em larga escala – 2019, 2021, 2022 e 2023. avaliações em larga escala" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">Avaliações em Larga Escala</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">22/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Relatório de correlação entre proficiência e perfis de leitor a partir de avaliações em larga escala – 2019, 2021, 2022 e 2023.</span>
-        </a>
-        <a href="ficha-23.dc.html" class="ficha-row" data-search="sistemas estaduais de avaliação externa da alfabetização e saeb/2019: avaliações em larga escala na alfabetização – uma análise comparada de seis experiências. avaliações em larga escala" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">Avaliações em Larga Escala</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">23/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Sistemas Estaduais de Avaliação Externa da Alfabetização e SAEB/2019: Avaliações em larga escala na Alfabetização – uma análise comparada de seis experiências.</span>
-        </a>
-        <a href="ficha-24.dc.html" class="ficha-row" data-search="regime de colaboração no ceará: funcionamento, causas do sucesso e alternativas de disseminação do modelo. regime de colaboração e indução à cooperação" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">Regime de Colaboração e Indução à Cooperação</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">24/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Regime de Colaboração no Ceará: Funcionamento, causas do sucesso e alternativas de disseminação do modelo.</span>
-        </a>
-        <a href="ficha-25.dc.html" class="ficha-row" data-search="indução à cooperação — iniciativas para a cooperação entre estado e municípios nas políticas educacionais: estudo de caso paic regime de colaboração e indução à cooperação" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">Regime de Colaboração e Indução à Cooperação</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">25/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Indução à Cooperação — Iniciativas para a cooperação entre estado e municípios nas políticas educacionais: Estudo de caso PAIC</span>
-        </a>
-        <a href="ficha-26.dc.html" class="ficha-row" data-search="custos do paic  (organizado também sob o título do material como " resumo="" executivo:="" custos="" e="" desempenho="" do="" paic="" ceará")="" regime="" de="" colaboração="" indução="" à="" cooperação"="" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">Regime de Colaboração e Indução à Cooperação</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">26/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Custos do PAIC  (organizado também sob o título do material como "Resumo Executivo: Custos e Desempenho do PAIC Ceará")</span>
-        </a>
-        <a href="ficha-27.dc.html" class="ficha-row" data-search="regime de colaboração no ceará: funcionamento, causas do sucesso e alternativas de disseminação do modelo regime de colaboração e indução à cooperação" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">Regime de Colaboração e Indução à Cooperação</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">27/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Regime de colaboração no Ceará: funcionamento, causas do sucesso e alternativas de disseminação do modelo</span>
-        </a>
-        <a href="ficha-28.dc.html" class="ficha-row" data-search="parc - avaliações de alfabetização parc" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">PARC</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">28/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">PARC - Avaliações de Alfabetização</span>
-        </a>
-        <a href="ficha-29.dc.html" class="ficha-row" data-search="análise pna relação com programa de alfabetização em rc – estudo sobre possíveis impactos da pna sobre o parc parc" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">PARC</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">29/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Análise PNA relação com Programa de Alfabetização em RC – Estudo sobre possíveis impactos da PNA sobre o PARC</span>
-        </a>
-        <a href="ficha-30.dc.html" class="ficha-row" data-search="relatório de avaliação econômica da parceria de alfabetização em regime de colaboração (parc) parc" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">PARC</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">30/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Relatório de Avaliação Econômica da Parceria de Alfabetização em Regime de Colaboração (PARC)</span>
-        </a>
-        <a href="ficha-31.dc.html" class="ficha-row" data-search="relatório intermediário de análise de implementação parc" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">PARC</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">31/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Relatório Intermediário de Análise de Implementação</span>
-        </a>
-        <a href="ficha-32.dc.html" class="ficha-row" data-search="teoria da mudança parc e teoria da mudança da sinergia parc e epv parc" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">PARC</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">32/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Teoria da Mudança PARC e Teoria da Mudança da Sinergia PARC e EpV</span>
-        </a>
-        <a href="ficha-33.dc.html" class="ficha-row" data-search="teoria da mudança parc e teoria da mudança da sinergia parc e epv - versão ii parc" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">PARC</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">33/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Teoria da Mudança PARC e Teoria da Mudança da Sinergia PARC e EpV - Versão II</span>
-        </a>
-        <a href="ficha-34.dc.html" class="ficha-row" data-search="análise comparada da implementação da parceria pela alfabetização em regime de colaboração (parc) por governos estaduais. parc" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">PARC</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">34/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Análise comparada da Implementação da Parceria pela Alfabetização em Regime de Colaboração (PARC) por governos estaduais.</span>
-        </a>
-        <a href="ficha-35.dc.html" class="ficha-row" data-search="avaliação de implementação do educar pra valer – relatório final epv" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">EpV</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">35/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Avaliação de Implementação do Educar pra Valer – Relatório Final</span>
-        </a>
-        <a href="ficha-36.dc.html" class="ficha-row" data-search="distribuição da parcela discricionária da cota-parte do icms e os resultados na educação. icms" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">ICMS</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">36/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Distribuição da parcela discricionária da cota-parte do ICMS e os resultados na educação.</span>
-        </a>
-        <a href="ficha-37.dc.html" class="ficha-row" data-search="impactos da reforma tributária no financiamento educacional municipal . icms" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">ICMS</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">37/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Impactos da Reforma Tributária no Financiamento Educacional Municipal .</span>
-        </a>
-        <a href="ficha-38.dc.html" class="ficha-row" data-search="avaliação e o icms educacional como estratégias para o alcance de bons resultados com equidade. icms" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">ICMS</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">38/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Avaliação e o ICMS educacional como estratégias para o alcance de bons resultados com equidade.</span>
-        </a>
-        <a href="ficha-39.dc.html" class="ficha-row" data-search="alfabetização na bncc. currículo e bncc" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">Currículo e BNCC</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">39/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Alfabetização na BNCC.</span>
-        </a>
-        <a href="ficha-40.dc.html" class="ficha-row" data-search="diagnóstico da base nacional comum curricular (bncc): alfabetização na base nacional comum curricular (bncc). currículo e bncc" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">Currículo e BNCC</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">40/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Diagnóstico da Base Nacional Comum Curricular (BNCC): Alfabetização na Base Nacional Comum Curricular (BNCC).</span>
-        </a>
-        <a href="ficha-41.dc.html" class="ficha-row" data-search="proposição de critérios para avaliação de livros didáticos de apoio à alfabetização (produtos 1 e 2) material didático" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">Material Didático</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">41/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Proposição de critérios para avaliação de livros didáticos de apoio à alfabetização (Produtos 1 e 2)</span>
-        </a>
-        <a href="ficha-42.dc.html" class="ficha-row" data-search="estratégias de comunicação de alfabetização: um olhar para sete territórios comunicação e alfabetização" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">Comunicação e Alfabetização</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">42/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Estratégias de comunicação de alfabetização: um olhar para sete territórios</span>
-        </a>
-        <a href="ficha-43.dc.html" class="ficha-row" data-search="alavanca - carreira jornada e remuneração profissão docente" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">Profissão Docente</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">43/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Alavanca - Carreira Jornada e Remuneração</span>
-        </a>
-        <a href="ficha-44.dc.html" class="ficha-row" data-search="violências escolares - fluxos  (também associado ao título do notebook " guia="" de="" fluxos="" e="" práticas="" restaurativas="" contra="" violência="" escolar")="" escolar"="" style="display:flex; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">Violência Escolar</span>
-            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">44/44</span>
-          </div>
-          <span style="font-size:15.5px; line-height:1.35; font-weight:500;">Violências escolares - fluxos  (também associado ao título do notebook "Guia de Fluxos e Práticas Restaurativas contra Violência Escolar")</span>
-        </a>
+    <sc-for list="{{ rows }}" as="row" hint-placeholder-count="44">
+      <a href="{{ row.href }}" class="ficha-row" data-search="{{ row.search }}" style="display:{{ row.display }}; flex-direction:column; gap:4px; padding:14px 12px; border-bottom:1px solid #e4e0d6; text-decoration:none; color:#1c1a17;">
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
+          <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; color:#6b6459;">{{ row.eixo }}</span>
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a8378; flex-shrink:0;">{{ row.numTotal }}</span>
+        </div>
+        <span style="font-size:15.5px; line-height:1.35; font-weight:500;">{{ row.titulo }}</span>
+      </a>
+    </sc-for>
   </div>
 </div>
-]]&gt;
+]]>
 </x-dc>
 <script type="text/x-dc" data-dc-script>
+const ROWS = [
+ {
+  "href": "ficha-01.dc.html",
+  "eixo": "Alfabetização",
+  "numTotal": "1/44",
+  "titulo": "Análise comparada dos objetivos curriculares e as avaliações nacionais com foco no desenvolvimento da alfabetização no Brasil e no Chile (também referenciado como \"Estudo comparado sobre as políticas de alfabetização no Brasil e no Chile\").",
+  "search": "analise comparada dos objetivos curriculares e as avaliacoes nacionais com foco no desenvolvimento da alfabetizacao no brasil e no chile (tambem referenciado como \"estudo comparado sobre as politicas de alfabetizacao no brasil e no chile\"). alfabetizacao"
+ },
+ {
+  "href": "ficha-02.dc.html",
+  "eixo": "Alfabetização",
+  "numTotal": "2/44",
+  "titulo": "Remedial Education: Evidence from a Sequence of Experiments in Colombia .",
+  "search": "remedial education: evidence from a sequence of experiments in colombia . alfabetizacao"
+ },
+ {
+  "href": "ficha-03.dc.html",
+  "eixo": "Alfabetização",
+  "numTotal": "3/44",
+  "titulo": "Utilização da abordagem fônica na etapa de alfabetização: um olhar para 11 territórios",
+  "search": "utilizacao da abordagem fonica na etapa de alfabetizacao: um olhar para 11 territorios alfabetizacao"
+ },
+ {
+  "href": "ficha-04.dc.html",
+  "eixo": "Alfabetização",
+  "numTotal": "4/44",
+  "titulo": "Alfabetização em Língua Portuguesa e Aprendizado em matemática",
+  "search": "alfabetizacao em lingua portuguesa e aprendizado em matematica alfabetizacao"
+ },
+ {
+  "href": "ficha-05.dc.html",
+  "eixo": "Alfabetização",
+  "numTotal": "5/44",
+  "titulo": "ESTUDO PARA CONSTRUÇÃO DE VISÃO SOBRE ALFABETIZAÇÃO - Análise de avaliações de LP do 2º ano",
+  "search": "estudo para construcao de visao sobre alfabetizacao - analise de avaliacoes de lp do 2º ano alfabetizacao"
+ },
+ {
+  "href": "ficha-06.dc.html",
+  "eixo": "Fluência Leitora, Parâmetros",
+  "numTotal": "6/44",
+  "titulo": "Estudos sobre os parâmetros das avaliações de fluência leitora no 2º ano do ensino fundamental",
+  "search": "estudos sobre os parametros das avaliacoes de fluencia leitora no 2º ano do ensino fundamental fluencia leitora, parametros"
+ },
+ {
+  "href": "ficha-07.dc.html",
+  "eixo": "Fluência Leitora, Parâmetros",
+  "numTotal": "7/44",
+  "titulo": "Complexidade Textual",
+  "search": "complexidade textual fluencia leitora, parametros"
+ },
+ {
+  "href": "ficha-08.dc.html",
+  "eixo": "Fluência Leitora, Parâmetros",
+  "numTotal": "8/44",
+  "titulo": "Estudos sobre os parâmetros das avaliações de fluência leitora no 2° ano do ensino fundamental no Brasil (Estudo de revisão de escopo da literatura e estudo com análises quantitativas de avaliação de fluência de larga escala na rede pública de alguns territórios brasileiros) dentificar como a complexidade textual é abordada nos currículos, materiais didáticos e na formação docente em diferentes territórios",
+  "search": "estudos sobre os parametros das avaliacoes de fluencia leitora no 2° ano do ensino fundamental no brasil (estudo de revisao de escopo da literatura e estudo com analises quantitativas de avaliacao de fluencia de larga escala na rede publica de alguns territorios brasileiros) dentificar como a complexidade textual e abordada nos curriculos, materiais didaticos e na formacao docente em diferentes territorios fluencia leitora, parametros"
+ },
+ {
+  "href": "ficha-09.dc.html",
+  "eixo": "Fluência Leitora, Parâmetros",
+  "numTotal": "9/44",
+  "titulo": "Fluência em Leitura e Compreensão de Textos",
+  "search": "fluencia em leitura e compreensao de textos fluencia leitora, parametros"
+ },
+ {
+  "href": "ficha-10.dc.html",
+  "eixo": "Fluência Leitora, Parâmetros",
+  "numTotal": "10/44",
+  "titulo": "Compreendendo pedagogicamente a relação entre resultados da avaliação de leitura e os resultados da avaliação de fluência em leitura oral",
+  "search": "compreendendo pedagogicamente a relacao entre resultados da avaliacao de leitura e os resultados da avaliacao de fluencia em leitura oral fluencia leitora, parametros"
+ },
+ {
+  "href": "ficha-11.dc.html",
+  "eixo": "Fluência Leitora, Parâmetros",
+  "numTotal": "11/44",
+  "titulo": "Avaliação periódica de fluência leitora em três UF brasileiras: considerações sobre a evolução da aprendizagem.",
+  "search": "avaliacao periodica de fluencia leitora em tres uf brasileiras: consideracoes sobre a evolucao da aprendizagem. fluencia leitora, parametros"
+ },
+ {
+  "href": "ficha-12.dc.html",
+  "eixo": "Fluência Leitora, Parâmetros",
+  "numTotal": "12/44",
+  "titulo": "Pesquisa de correlação - fluência, proficiência e dados contextuais das avaliações em larga escala",
+  "search": "pesquisa de correlacao - fluencia, proficiencia e dados contextuais das avaliacoes em larga escala fluencia leitora, parametros"
+ },
+ {
+  "href": "ficha-13.dc.html",
+  "eixo": "Fluência Leitora, Parâmetros",
+  "numTotal": "13/44",
+  "titulo": "Aplicativo Ediler para Avaliação de Fluência em Leitura Oral: Investigando a Consistência dos Resultados das Avaliações Realizadas",
+  "search": "aplicativo ediler para avaliacao de fluencia em leitura oral: investigando a consistencia dos resultados das avaliacoes realizadas fluencia leitora, parametros"
+ },
+ {
+  "href": "ficha-14.dc.html",
+  "eixo": "Fluência Leitora, Parâmetros",
+  "numTotal": "14/44",
+  "titulo": "Fluência em leitura como preditora de proficiência: evidências de validade a partir dos dados de avaliações em larga escala de 2023",
+  "search": "fluencia em leitura como preditora de proficiencia: evidencias de validade a partir dos dados de avaliacoes em larga escala de 2023 fluencia leitora, parametros"
+ },
+ {
+  "href": "ficha-15.dc.html",
+  "eixo": "Fluência Leitora, Parâmetros",
+  "numTotal": "15/44",
+  "titulo": "A relação entre a implementação de políticas de alfabetização e o desenvolvimento de leitura ao final do 2º ano do Ensino Fundamental.",
+  "search": "a relacao entre a implementacao de politicas de alfabetizacao e o desenvolvimento de leitura ao final do 2º ano do ensino fundamental. fluencia leitora, parametros"
+ },
+ {
+  "href": "ficha-16.dc.html",
+  "eixo": "Fluência Leitora, Parâmetros",
+  "numTotal": "16/44",
+  "titulo": "Análise Teórico-Metodológica do Instrumento de Avaliação da Fluência de Leitura no Programa Educar pra Valer",
+  "search": "analise teorico-metodologica do instrumento de avaliacao da fluencia de leitura no programa educar pra valer fluencia leitora, parametros"
+ },
+ {
+  "href": "ficha-17.dc.html",
+  "eixo": "Avaliações em Larga Escala",
+  "numTotal": "17/44",
+  "titulo": "Avaliações em Larga Escala na Alfabetização: uma análise comparada de 6 experiências",
+  "search": "avaliacoes em larga escala na alfabetizacao: uma analise comparada de 6 experiencias avaliacoes em larga escala"
+ },
+ {
+  "href": "ficha-18.dc.html",
+  "eixo": "Avaliações em Larga Escala",
+  "numTotal": "18/44",
+  "titulo": "Acesso/Qualidade da Educação Infantil e seus Impactos na Escala SAEB",
+  "search": "acesso/qualidade da educacao infantil e seus impactos na escala saeb avaliacoes em larga escala"
+ },
+ {
+  "href": "ficha-19.dc.html",
+  "eixo": "Avaliações em Larga Escala",
+  "numTotal": "19/44",
+  "titulo": "Um panorama da situação de aprendizagem dos estudantes do 2º ano do Ensino Fundamental a partir do Saeb 2021",
+  "search": "um panorama da situacao de aprendizagem dos estudantes do 2º ano do ensino fundamental a partir do saeb 2021 avaliacoes em larga escala"
+ },
+ {
+  "href": "ficha-20.dc.html",
+  "eixo": "Avaliações em Larga Escala",
+  "numTotal": "20/44",
+  "titulo": "Relação do desempenho no 2º ano com os resultados do 5º ano",
+  "search": "relacao do desempenho no 2º ano com os resultados do 5º ano avaliacoes em larga escala"
+ },
+ {
+  "href": "ficha-21.dc.html",
+  "eixo": "Avaliações em Larga Escala",
+  "numTotal": "21/44",
+  "titulo": "Perfis de leitor, proficiência e dados contextuais: Pesquisa de correlação a partir de avaliações em larga escala – 2019, 2021 e 2022",
+  "search": "perfis de leitor, proficiencia e dados contextuais: pesquisa de correlacao a partir de avaliacoes em larga escala – 2019, 2021 e 2022 avaliacoes em larga escala"
+ },
+ {
+  "href": "ficha-22.dc.html",
+  "eixo": "Avaliações em Larga Escala",
+  "numTotal": "22/44",
+  "titulo": "Relatório de correlação entre proficiência e perfis de leitor a partir de avaliações em larga escala – 2019, 2021, 2022 e 2023.",
+  "search": "relatorio de correlacao entre proficiencia e perfis de leitor a partir de avaliacoes em larga escala – 2019, 2021, 2022 e 2023. avaliacoes em larga escala"
+ },
+ {
+  "href": "ficha-23.dc.html",
+  "eixo": "Avaliações em Larga Escala",
+  "numTotal": "23/44",
+  "titulo": "Sistemas Estaduais de Avaliação Externa da Alfabetização e SAEB/2019: Avaliações em larga escala na Alfabetização – uma análise comparada de seis experiências.",
+  "search": "sistemas estaduais de avaliacao externa da alfabetizacao e saeb/2019: avaliacoes em larga escala na alfabetizacao – uma analise comparada de seis experiencias. avaliacoes em larga escala"
+ },
+ {
+  "href": "ficha-24.dc.html",
+  "eixo": "Regime de Colaboração e Indução à Cooperação",
+  "numTotal": "24/44",
+  "titulo": "Regime de Colaboração no Ceará: Funcionamento, causas do sucesso e alternativas de disseminação do modelo.",
+  "search": "regime de colaboracao no ceara: funcionamento, causas do sucesso e alternativas de disseminacao do modelo. regime de colaboracao e inducao a cooperacao"
+ },
+ {
+  "href": "ficha-25.dc.html",
+  "eixo": "Regime de Colaboração e Indução à Cooperação",
+  "numTotal": "25/44",
+  "titulo": "Indução à Cooperação — Iniciativas para a cooperação entre estado e municípios nas políticas educacionais: Estudo de caso PAIC",
+  "search": "inducao a cooperacao — iniciativas para a cooperacao entre estado e municipios nas politicas educacionais: estudo de caso paic regime de colaboracao e inducao a cooperacao"
+ },
+ {
+  "href": "ficha-26.dc.html",
+  "eixo": "Regime de Colaboração e Indução à Cooperação",
+  "numTotal": "26/44",
+  "titulo": "Custos do PAIC  (organizado também sob o título do material como \"Resumo Executivo: Custos e Desempenho do PAIC Ceará\")",
+  "search": "custos do paic  (organizado tambem sob o titulo do material como \"resumo executivo: custos e desempenho do paic ceara\") regime de colaboracao e inducao a cooperacao"
+ },
+ {
+  "href": "ficha-27.dc.html",
+  "eixo": "Regime de Colaboração e Indução à Cooperação",
+  "numTotal": "27/44",
+  "titulo": "Regime de colaboração no Ceará: funcionamento, causas do sucesso e alternativas de disseminação do modelo",
+  "search": "regime de colaboracao no ceara: funcionamento, causas do sucesso e alternativas de disseminacao do modelo regime de colaboracao e inducao a cooperacao"
+ },
+ {
+  "href": "ficha-28.dc.html",
+  "eixo": "PARC",
+  "numTotal": "28/44",
+  "titulo": "PARC - Avaliações de Alfabetização",
+  "search": "parc - avaliacoes de alfabetizacao parc"
+ },
+ {
+  "href": "ficha-29.dc.html",
+  "eixo": "PARC",
+  "numTotal": "29/44",
+  "titulo": "Análise PNA relação com Programa de Alfabetização em RC – Estudo sobre possíveis impactos da PNA sobre o PARC",
+  "search": "analise pna relacao com programa de alfabetizacao em rc – estudo sobre possiveis impactos da pna sobre o parc parc"
+ },
+ {
+  "href": "ficha-30.dc.html",
+  "eixo": "PARC",
+  "numTotal": "30/44",
+  "titulo": "Relatório de Avaliação Econômica da Parceria de Alfabetização em Regime de Colaboração (PARC)",
+  "search": "relatorio de avaliacao economica da parceria de alfabetizacao em regime de colaboracao (parc) parc"
+ },
+ {
+  "href": "ficha-31.dc.html",
+  "eixo": "PARC",
+  "numTotal": "31/44",
+  "titulo": "Relatório Intermediário de Análise de Implementação",
+  "search": "relatorio intermediario de analise de implementacao parc"
+ },
+ {
+  "href": "ficha-32.dc.html",
+  "eixo": "PARC",
+  "numTotal": "32/44",
+  "titulo": "Teoria da Mudança PARC e Teoria da Mudança da Sinergia PARC e EpV",
+  "search": "teoria da mudanca parc e teoria da mudanca da sinergia parc e epv parc"
+ },
+ {
+  "href": "ficha-33.dc.html",
+  "eixo": "PARC",
+  "numTotal": "33/44",
+  "titulo": "Teoria da Mudança PARC e Teoria da Mudança da Sinergia PARC e EpV - Versão II",
+  "search": "teoria da mudanca parc e teoria da mudanca da sinergia parc e epv - versao ii parc"
+ },
+ {
+  "href": "ficha-34.dc.html",
+  "eixo": "PARC",
+  "numTotal": "34/44",
+  "titulo": "Análise comparada da Implementação da Parceria pela Alfabetização em Regime de Colaboração (PARC) por governos estaduais.",
+  "search": "analise comparada da implementacao da parceria pela alfabetizacao em regime de colaboracao (parc) por governos estaduais. parc"
+ },
+ {
+  "href": "ficha-35.dc.html",
+  "eixo": "EpV",
+  "numTotal": "35/44",
+  "titulo": "Avaliação de Implementação do Educar pra Valer – Relatório Final",
+  "search": "avaliacao de implementacao do educar pra valer – relatorio final epv"
+ },
+ {
+  "href": "ficha-36.dc.html",
+  "eixo": "ICMS",
+  "numTotal": "36/44",
+  "titulo": "Distribuição da parcela discricionária da cota-parte do ICMS e os resultados na educação.",
+  "search": "distribuicao da parcela discricionaria da cota-parte do icms e os resultados na educacao. icms"
+ },
+ {
+  "href": "ficha-37.dc.html",
+  "eixo": "ICMS",
+  "numTotal": "37/44",
+  "titulo": "Impactos da Reforma Tributária no Financiamento Educacional Municipal .",
+  "search": "impactos da reforma tributaria no financiamento educacional municipal . icms"
+ },
+ {
+  "href": "ficha-38.dc.html",
+  "eixo": "ICMS",
+  "numTotal": "38/44",
+  "titulo": "Avaliação e o ICMS educacional como estratégias para o alcance de bons resultados com equidade.",
+  "search": "avaliacao e o icms educacional como estrategias para o alcance de bons resultados com equidade. icms"
+ },
+ {
+  "href": "ficha-39.dc.html",
+  "eixo": "Currículo e BNCC",
+  "numTotal": "39/44",
+  "titulo": "Alfabetização na BNCC.",
+  "search": "alfabetizacao na bncc. curriculo e bncc"
+ },
+ {
+  "href": "ficha-40.dc.html",
+  "eixo": "Currículo e BNCC",
+  "numTotal": "40/44",
+  "titulo": "Diagnóstico da Base Nacional Comum Curricular (BNCC): Alfabetização na Base Nacional Comum Curricular (BNCC).",
+  "search": "diagnostico da base nacional comum curricular (bncc): alfabetizacao na base nacional comum curricular (bncc). curriculo e bncc"
+ },
+ {
+  "href": "ficha-41.dc.html",
+  "eixo": "Material Didático",
+  "numTotal": "41/44",
+  "titulo": "Proposição de critérios para avaliação de livros didáticos de apoio à alfabetização (Produtos 1 e 2)",
+  "search": "proposicao de criterios para avaliacao de livros didaticos de apoio a alfabetizacao (produtos 1 e 2) material didatico"
+ },
+ {
+  "href": "ficha-42.dc.html",
+  "eixo": "Comunicação e Alfabetização",
+  "numTotal": "42/44",
+  "titulo": "Estratégias de comunicação de alfabetização: um olhar para sete territórios",
+  "search": "estrategias de comunicacao de alfabetizacao: um olhar para sete territorios comunicacao e alfabetizacao"
+ },
+ {
+  "href": "ficha-43.dc.html",
+  "eixo": "Profissão Docente",
+  "numTotal": "43/44",
+  "titulo": "Alavanca - Carreira Jornada e Remuneração",
+  "search": "alavanca - carreira jornada e remuneracao profissao docente"
+ },
+ {
+  "href": "ficha-44.dc.html",
+  "eixo": "Violência Escolar",
+  "numTotal": "44/44",
+  "titulo": "Violências escolares - fluxos  (também associado ao título do notebook \"Guia de Fluxos e Práticas Restaurativas contra Violência Escolar\")",
+  "search": "violencias escolares - fluxos  (tambem associado ao titulo do notebook \"guia de fluxos e praticas restaurativas contra violencia escolar\") violencia escolar"
+ }
+];
+
+function normalize(s) {
+  return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
 class Component extends DCLogic {
-  renderVals() { return {}; }
+  state = { query: '' };
+
+  renderVals() {
+    const q = normalize(this.state.query);
+    return {
+      rows: ROWS.map(r => ({ ...r, display: r.search.indexOf(q) === -1 ? 'none' : 'flex' })),
+      onSearch: (e) => this.setState({ query: e.target.value })
+    };
+  }
 }
 </script>
 </body>
